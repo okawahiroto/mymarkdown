@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>mymarkdown</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+    <!-- 最新＋firebase-database.js(github記載のSDK) -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+
+    <!-- github記載のSDK
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script> -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDCENSMwZ-pneQHVfWq0ptSXpGZn3-muM4",
+        authDomain: "mymarkdown-20200428.firebaseapp.com",
+        databaseURL: "https://mymarkdown-20200428.firebaseio.com",
+        projectId: "mymarkdown-20200428",
+        storageBucket: "mymarkdown-20200428.appspot.com",
+        messagingSenderId: "294830442412",
+        appId: "1:294830442412:web:f37ef21499db84d813dc09",
+        measurementId: "G-1HBM1CT2VC"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
+    <script src="./build.js"></script>
+</body>
+</html>
