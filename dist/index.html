@@ -7,23 +7,24 @@
   <body>
     <div id="app"></div>
 
+    <!-- 20200429 github記載のSDKを利用する -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script> -->
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script> -->
 
     <!-- 最新＋firebase-database.js(github記載のSDK) -->
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script> -->
 
-    <!-- github記載のSDK
+    <!-- github記載のSDK -->
     <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
 
     <script>
       // Your web app's Firebase configuration
@@ -39,7 +40,9 @@
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
+
+      // 20200429 コメントアウト
+      // firebase.analytics();
     </script>
 
     <script src="./build.js"></script>
