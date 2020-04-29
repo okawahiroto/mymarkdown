@@ -1,7 +1,6 @@
 .DS_Store
 node_modules/
 dist/
-.firebase/
 npm-debug.log
 yarn-error.log
 !dist/index.html
@@ -12,3 +11,5 @@ yarn-error.log
 *.ntvs*
 *.njsproj
 *.sln
+# 20200429_追加_deployの度に変更されるので追加
+.firebase/hosting.ZGlzdA.cache
