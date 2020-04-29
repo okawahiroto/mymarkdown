@@ -13,9 +13,10 @@ export default {
       msg: "Welcome to MyMarkdown"
     };
   },
+  // 20200429_googleAuth→GoogleAuth〜gを大文字に修正
   methods: {
     googleLogin: function() {
-      firebase.auth().signInWithRedirect(new firebase.auth.googleAuthProvider());
+      firebase.auth().signInWithRedirect(new firebase.auth.GoogleAuthProvider());
     }
   }
 };
