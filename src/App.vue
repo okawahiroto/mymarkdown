@@ -36,4 +36,4 @@ export default {
     Editor: Editor
   }
 };
-</script>z
+</script>
