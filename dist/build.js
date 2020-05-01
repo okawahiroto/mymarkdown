@@ -613,6 +613,19 @@ module.exports = function normalizeComponent (
       }
     });
   },
+  mounted: function mounted() {
+    var _this2 = this;
+
+    document.onkeydown = function (e) {
+      if (e.key == "s" && (e.metaKey || e.ctrlKey)) {
+        _this2.saveMemos();
+        return false;
+      }
+    };
+  },
+  beforeDestroy: function beforeDestroy() {
+    document.onkeydown = null;
+  },
   methods: {
     logout: function logout() {
       firebase.auth().signOut();
@@ -14022,7 +14035,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Editor_vue__ = __webpack_require__(6);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_ae53e324_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Editor_vue__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_b34387ec_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Editor_vue__ = __webpack_require__(29);
 function injectStyle (ssrContext) {
   __webpack_require__(20)
 }
@@ -14037,12 +14050,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-ae53e324"
+var __vue_scopeId__ = "data-v-b34387ec"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Editor_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_ae53e324_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Editor_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_b34387ec_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_Editor_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -14063,7 +14076,7 @@ var content = __webpack_require__(21);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(23)("bc259606", content, true, {});
+var update = __webpack_require__(23)("5a4d2d22", content, true, {});
 
 /***/ }),
 /* 21 */
@@ -14074,7 +14087,7 @@ exports = module.exports = __webpack_require__(22)(false);
 
 
 // module
-exports.push([module.i, ".editorWrapper[data-v-ae53e324]{display:flex}.memoListWrapper[data-v-ae53e324]{width:20%;border-top:1px solid #000}.memoList[data-v-ae53e324]{padding:10px;box-sizing:border-box;text-align:left;border-bottom:1px solid #000}.memoList[data-v-ae53e324]:nth-child(2n){background-color:#ccc}.memoList[data-selected=true][data-v-ae53e324]{background-color:#ccf}.memoTitle[data-v-ae53e324]{height:1.5em;margin:0;white-space:nowrap;overflow:hidden}.addMemoBtn[data-v-ae53e324]{margin-top:20px}.deleteMemoBtn[data-v-ae53e324]{margin:10px}.markdown[data-v-ae53e324]{width:40%;height:500px}.preview[data-v-ae53e324]{width:40%;text-align:left}", ""]);
+exports.push([module.i, ".editorWrapper[data-v-b34387ec]{display:flex}.memoListWrapper[data-v-b34387ec]{width:20%;border-top:1px solid #000}.memoList[data-v-b34387ec]{padding:10px;box-sizing:border-box;text-align:left;border-bottom:1px solid #000}.memoList[data-v-b34387ec]:nth-child(2n){background-color:#ccc}.memoList[data-selected=true][data-v-b34387ec]{background-color:#ccf}.memoTitle[data-v-b34387ec]{height:1.5em;margin:0;white-space:nowrap;overflow:hidden}.addMemoBtn[data-v-b34387ec]{margin-top:20px}.deleteMemoBtn[data-v-b34387ec]{margin:10px}.markdown[data-v-b34387ec]{width:40%;height:500px}.preview[data-v-b34387ec]{width:40%;text-align:left}", ""]);
 
 // exports
 
