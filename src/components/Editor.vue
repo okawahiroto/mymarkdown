@@ -33,6 +33,17 @@ export default {
       selectedIndex: 0
     };
   },
+  created: function() {
+    firebase
+      .database()
+      .ref("memos/" + this.user.uid)
+      .once("value")
+      .then(result => {
+        if (result.val()) {
+          this.memos = result.val();
+        }
+      });
+  },
   methods: {
     logout: function() {
       firebase.auth().signOut();
