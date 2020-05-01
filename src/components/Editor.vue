@@ -10,6 +10,7 @@
         </div>
         <button class="addMemoBtn" @click="addMemo">メモの追加</button>
         <button class="deleteMemoBtn" v-if="memos.length > 1" @click="deleteMemo">選択中のメモの削除</button>
+        <button class="saveMemosBtn" @click="saveMemos">メモの保存</button>
       </div>
       <textarea class="markdown" v-model="memos[selectedIndex].markdown"></textarea>
       <div class="preview" v-html="preview()"></div>
@@ -33,27 +34,33 @@ export default {
     };
   },
   methods: {
-    logout: function () {
+    logout: function() {
       firebase.auth().signOut();
     },
-    addMemo: function () {
+    addMemo: function() {
       this.memos.push({
         markdown: "無題のメモ"
       });
     },
-    deleteMemo: function () {
+    deleteMemo: function() {
       this.memos.splice(this.selectedIndex, 1);
       if (this.selectedIndex > 0) {
         this.selectedIndex--;
       }
     },
-    selectMemo: function (index) {
+    saveMemos: function() {
+      firebase
+        .database()
+        .ref("memos/" + this.user.uid)
+        .set(this.memos);
+    },
+    selectMemo: function(index) {
       this.selectedIndex = index;
     },
     preview: function() {
       return marked(this.memos[this.selectedIndex].markdown);
     },
-    displayTitle: function (text) {
+    displayTitle: function(text) {
       return text.split(/\n/)[0];
     }
   }
@@ -87,6 +94,9 @@ export default {
 }
 .addMemoBtn {
   margin-top: 20px;
+}
+.deleteMemoBtn {
+  margin: 10px;
 }
 .markdown {
   width: 40%;
