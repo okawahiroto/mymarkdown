@@ -42,7 +42,7 @@ export default {
         if (result.val()) {
           this.memos = result.val();
         }
-      });
+      })
   },
   mounted: function() {
     document.onkeydown = e => {
@@ -62,7 +62,7 @@ export default {
     addMemo: function() {
       this.memos.push({
         markdown: "無題のメモ"
-      });
+      })
     },
     deleteMemo: function() {
       this.memos.splice(this.selectedIndex, 1);
